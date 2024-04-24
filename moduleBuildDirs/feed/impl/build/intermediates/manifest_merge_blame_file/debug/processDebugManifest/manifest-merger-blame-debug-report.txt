@@ -1,0 +1,19 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.r0adkll.feed.impl" >
+4
+5    <uses-sdk android:minSdkVersion="26" />
+6
+7    <application>
+7-->/Users/drew.heavner/RedditProjects/AnvilICIssueSample/feed/impl/src/main/AndroidManifest.xml:4:5-9:19
+8        <activity
+8-->/Users/drew.heavner/RedditProjects/AnvilICIssueSample/feed/impl/src/main/AndroidManifest.xml:5:9-8:15
+9            android:name="com.r0adkll.feed.impl.ui.FeedScreen"
+9-->/Users/drew.heavner/RedditProjects/AnvilICIssueSample/feed/impl/src/main/AndroidManifest.xml:5:19-48
+10            android:exported="true"
+10-->/Users/drew.heavner/RedditProjects/AnvilICIssueSample/feed/impl/src/main/AndroidManifest.xml:6:13-36
+11            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+11-->/Users/drew.heavner/RedditProjects/AnvilICIssueSample/feed/impl/src/main/AndroidManifest.xml:7:13-76
+12    </application>
+13
+14</manifest>
