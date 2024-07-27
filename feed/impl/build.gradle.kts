@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.androidLibrary)
   alias(libs.plugins.jetbrainsKotlinAndroid)
   alias(libs.plugins.anvil)
+  alias(libs.plugins.ksp)
 }
 
 android {
@@ -22,35 +23,30 @@ android {
     }
   }
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
   }
   kotlinOptions {
-    jvmTarget = "11"
+    jvmTarget = "17"
   }
   buildFeatures {
     compose = true
   }
   composeOptions {
-    kotlinCompilerExtensionVersion = "1.5.9"
+    kotlinCompilerExtensionVersion = "1.5.14"
   }
 }
 
-//androidComponents {
-//  beforeVariants(selector().all()) { variantBuilder ->
-//    if (variantBuilder.buildType != "release") {
-//      variantBuilder.enable = false
-//    }
-//  }
-//}
-
 anvil {
   generateDaggerFactories.set(true)
+  useKsp(contributesAndFactoryGeneration = true)
 }
 
 dependencies {
   api(project(":feed:api"))
   implementation(project(":common"))
+
+  ksp(project(":feed:compiler"))
 
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.kotlinx.coroutines.android)

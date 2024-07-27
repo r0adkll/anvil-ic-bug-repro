@@ -20,7 +20,7 @@ interface FeedComponent {
     val feedComponentFactory: Factory
   }
 
-  @Subcomponent.Factory
+  @MergeSubcomponent.Factory
   interface Factory {
     fun create(
       @BindsInstance activityContext: Context,

@@ -11,7 +11,7 @@ import dagger.Component
 @MergeComponent(AppScope::class)
 interface AppComponent {
 
-  @Component.Factory
+  @MergeComponent.Factory
   interface Factory {
     fun create(
       @BindsInstance application: Application,

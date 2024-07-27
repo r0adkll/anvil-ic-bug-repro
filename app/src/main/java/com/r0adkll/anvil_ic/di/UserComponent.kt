@@ -21,7 +21,7 @@ interface UserComponent {
     val userComponentFactory: Factory
   }
 
-  @Subcomponent.Factory
+  @MergeSubcomponent.Factory
   interface Factory {
     fun create(): UserComponent
   }

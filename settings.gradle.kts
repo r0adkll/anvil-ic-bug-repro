@@ -9,6 +9,7 @@ pluginManagement {
     }
     mavenCentral()
     gradlePluginPortal()
+    mavenLocal()
   }
 }
 dependencyResolutionManagement {
@@ -16,6 +17,7 @@ dependencyResolutionManagement {
   repositories {
     google()
     mavenCentral()
+    mavenLocal()
   }
 }
 
@@ -25,3 +27,4 @@ include(":app")
 include(":common")
 include(":feed:api")
 include(":feed:impl")
+include(":feed:compiler")
