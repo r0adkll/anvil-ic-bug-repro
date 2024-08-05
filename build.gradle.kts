@@ -10,6 +10,6 @@ plugins {
   alias(libs.plugins.ksp) apply false
 }
 
-allprojects {
-  layout.buildDirectory.set(File("${rootProject.rootDir}/moduleBuildDirs/${rootProject.relativePath(project.projectDir)}/build"))
-}
+//allprojects {
+//  layout.buildDirectory.set(File("${rootProject.rootDir}/moduleBuildDirs/${rootProject.relativePath(project.projectDir)}/build"))
+//}

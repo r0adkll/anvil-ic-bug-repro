@@ -12,6 +12,11 @@ kotlin {
   jvmToolchain(17)
 }
 
+anvil {
+  generateDaggerFactories = true
+  useKsp(contributesAndFactoryGeneration = true)
+}
+
 dependencies {
   api(libs.dagger)
   api(libs.javax.inject)

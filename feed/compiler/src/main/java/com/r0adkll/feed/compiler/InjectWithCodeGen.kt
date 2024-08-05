@@ -115,21 +115,21 @@ object InjectWithCodeGen {
 
         // Comment this out to re-produce the Anvil generated ParentComponent on contributed
         // subcomponent implementations
-        addType(
-          TypeSpec.interfaceBuilder("Parent")
-            .addAnnotation(
-              AnnotationSpec.builder(ContributesTo::class)
-                .addMember("%T::class", UserScope::class.asClassName())
-                .build(),
-            )
-            .addFunction(
-              FunSpec.builder(clazz.componentFactoryProvisionName())
-                .addModifiers(KModifier.ABSTRACT)
-                .returns(componentName.nestedClass("Factory"))
-                .build(),
-            )
-            .build(),
-        )
+//        addType(
+//          TypeSpec.interfaceBuilder("Parent")
+//            .addAnnotation(
+//              AnnotationSpec.builder(ContributesTo::class)
+//                .addMember("%T::class", UserScope::class.asClassName())
+//                .build(),
+//            )
+//            .addFunction(
+//              FunSpec.builder(clazz.componentFactoryProvisionName())
+//                .addModifiers(KModifier.ABSTRACT)
+//                .returns(componentName.nestedClass("Factory"))
+//                .build(),
+//            )
+//            .build(),
+//        )
 
         addType(
           TypeSpec.interfaceBuilder("Factory")

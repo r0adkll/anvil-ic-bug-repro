@@ -1,3 +1,6 @@
+import com.google.devtools.ksp.gradle.KspTaskJvm
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
   alias(libs.plugins.androidApplication)
   alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -49,8 +52,16 @@ android {
 }
 
 anvil {
-  generateDaggerFactories.set(true)
-  useKsp(contributesAndFactoryGeneration = true)
+  generateDaggerFactories.set(false)
+  useKsp(contributesAndFactoryGeneration = true, componentMerging = true)
+}
+
+afterEvaluate {
+  val kspDebugTask = tasks.named<KspTaskJvm>("kspDebugKotlin")
+  val kspKotlinFiles = kspDebugTask.flatMap { it.destination }
+  tasks.named<KotlinCompile>("kaptGenerateStubsDebugKotlin").configure {
+    source(kspKotlinFiles)
+  }
 }
 
 dependencies {

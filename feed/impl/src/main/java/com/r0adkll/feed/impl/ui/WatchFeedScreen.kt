@@ -25,7 +25,7 @@ import com.r0adkll.feed.impl.ui.theme.AnvilICIssueSampleTheme
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-@InjectWith
+//@InjectWith
 class WatchFeedScreen : ComponentActivity() {
 
   @Inject

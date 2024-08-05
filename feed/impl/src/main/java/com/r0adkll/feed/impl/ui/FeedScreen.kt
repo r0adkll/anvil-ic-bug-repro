@@ -29,6 +29,9 @@ class FeedScreen : ComponentActivity() {
   @Inject
   lateinit var feedRepository: FeedRepository
 
+  @Inject
+  lateinit var feedEventHandler: FeedEventHandler
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     injectFeature()
