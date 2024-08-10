@@ -39,6 +39,7 @@ android {
 
 anvil {
   generateDaggerFactories.set(true)
+  kspContributingAnnotations.add("com.r0adkll.common.InjectWith")
   useKsp(
     contributesAndFactoryGeneration = true,
     componentMerging = true
